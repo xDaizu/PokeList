@@ -5,7 +5,7 @@ Living plan. Tick milestones off in the **Status** list as they complete.
 ## Status
 - [ ] M0 — Scaffold & deploy
 - [x] M1 — Data pipeline
-- [ ] M2 — Stats & domain model
+- [x] M2 — Stats & domain model
 - [ ] M3 — Paste import (Showdown + Pokepaste)
 - [ ] M4 — Validation
 - [ ] M5 — PDF renderer
