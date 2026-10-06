@@ -1,0 +1,55 @@
+Indeedee @ Focus Sash
+Ability: Psychic Surge
+Timid Nature
+# Champions stat points: HP 2 / SpA 32 / Spe 32
+- Expanding Force
+- Protect
+- Imprison
+- Trick Room
+
+Gliscor @ Psychic Seed
+Ability: Hyper Cutter
+Adamant Nature
+# Champions stat points: HP 2 / Atk 32 / Spe 32
+- High Horsepower
+- Acrobatics
+- Tailwind
+- Protect
+
+Kingambit @ Chople Berry
+Ability: Defiant
+Adamant Nature
+# Champions stat points: HP 32 / Atk 1 / Def 32 / SpD 1
+- Kowtow Cleave
+- Iron Head
+- Sucker Punch
+- Low Kick
+
+Charizard @ Charizardite Y
+Ability: Blaze
+# Champions mega preview: Y (variant 1)
+# Mega ability: Drought
+Modest Nature
+# Champions stat points: HP 32 / Def 2 / SpD 32
+- Heat Wave
+- Ancient Power
+- Protect
+- Weather Ball
+
+Annihilape @ Choice Scarf
+Ability: Defiant
+Jolly Nature
+# Champions stat points: Atk 32 / Def 2 / Spe 32
+- Phantom Force
+- Close Combat
+- Rock Slide
+- Ice Punch
+
+Venusaur @ Wide Lens
+Ability: Chlorophyll
+Timid Nature
+# Champions stat points: HP 32 / SpA 2 / Spe 32
+- Protect
+- Sludge Bomb
+- Sleep Powder
+- Leaf Storm
