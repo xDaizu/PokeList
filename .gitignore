@@ -29,3 +29,8 @@ project.inlang/cache/
 
 # Data pipeline cache (Showdown checkout, PokeAPI CSVs, sprite downloads)
 /.cache
+
+# Inlang generated
+/project.inlang/.lix
+/project.inlang/.meta.json
+/project.inlang/README.md

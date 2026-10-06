@@ -11,3 +11,8 @@ docs
 
 # Generated
 /src/lib/data/generated
+
+# Inlang generated
+/project.inlang/.lix
+/project.inlang/.meta.json
+/project.inlang/README.md
