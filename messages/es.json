@@ -1,0 +1,10 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"app_name": "PokeListo",
+	"home_heading": "Crea tu hoja de equipo VGC",
+	"home_tagline": "Pega o construye tu equipo de Pokémon Champions y obtén la lista de equipo oficial de Play! Pokémon en un PDF listo para imprimir.",
+	"language_label": "Idioma",
+	"language_en": "English",
+	"language_es": "Español",
+	"footer_disclaimer": "PokeListo es una herramienta hecha por fans y no está afiliada a Nintendo, Game Freak, Creatures ni The Pokémon Company."
+}

@@ -1,0 +1,10 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"app_name": "PokeListo",
+	"home_heading": "Build your VGC team sheet",
+	"home_tagline": "Paste or build your Pokémon Champions team and get the official Play! Pokémon team list as a ready-to-print PDF.",
+	"language_label": "Language",
+	"language_en": "English",
+	"language_es": "Español",
+	"footer_disclaimer": "PokeListo is a fan-made tool and is not affiliated with Nintendo, Game Freak, Creatures or The Pokémon Company."
+}
