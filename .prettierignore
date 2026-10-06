@@ -8,3 +8,6 @@ bun.lockb
 # Miscellaneous
 /static/
 docs
+
+# Generated
+/src/lib/data/generated

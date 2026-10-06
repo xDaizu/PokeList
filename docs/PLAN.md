@@ -4,7 +4,7 @@ Living plan. Tick milestones off in the **Status** list as they complete.
 
 ## Status
 - [ ] M0 — Scaffold & deploy
-- [ ] M1 — Data pipeline
+- [x] M1 — Data pipeline
 - [ ] M2 — Stats & domain model
 - [ ] M3 — Paste import (Showdown + Pokepaste)
 - [ ] M4 — Validation
@@ -81,7 +81,8 @@ Rule: each milestone ships with its own tests and a "done when" check, and is te
 - Tests: Vitest smoke test; Playwright: `/en/` and `/es/` render translated heading, root redirects by browser language.
 - Done when: live GH Pages URL shows the page in both languages under the base path.
 
-**M1 — Data pipeline**
+**M1 — Data pipeline** ✅
+- Implementation notes: Showdown's `champions`/`championsregmb` mods aren't in `@pkmn/*`, so `npm run data` fetches a pinned `smogon/pokemon-showdown` commit into `.cache/` and runs its real `Dex` via tsx. Regulations are cumulative (M-C ⊃ M-B ⊃ M-A, per Serebii); M-A has no Showdown mod, so only M-C (current) and M-B are generated. Sprites come from PokeAPI/sprites (pinned) converted to webp; Champions-new mega stones have no sprite yet (warning only). `resolveAlias(kind, text)` is per-kind. Overrides: `data/overrides/{en,es}.json` (`{kind: {id: name}}`).
 - Scope: `scripts/build-data.ts` → `src/lib/data/generated/*` + sprites; typed loaders `getSpecies(id)`, `nameOf(kind, id, lang)`, `resolveAlias(text)`.
 - Tests: every legal species/move/item/ability/nature has EN+ES names; `resolveAlias` resolves EN, ES, accent‑less and case variants (e.g. "Garchomp", "Rugido", "rugido"); megastones map to base species; known base stats spot‑checked; regulation list non‑empty.
 - Done when: `npm run data` is reproducible (re‑run → no diff) and coverage tests pass.
