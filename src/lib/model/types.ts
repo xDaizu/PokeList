@@ -35,7 +35,7 @@ export interface Player {
 	playerId: string;
 	/** DD/MM/YYYY */
 	dob: string;
-	division: 'junior' | 'senior' | 'masters' | '';
+	division: 'juniors' | 'seniors' | 'masters' | '';
 	switchProfile: string;
 	supportId: string;
 	battleTeam: string;
