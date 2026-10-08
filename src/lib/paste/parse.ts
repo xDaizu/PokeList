@@ -192,18 +192,15 @@ export function parseShowdown(text: string): ParseResult {
 	const blocks: Line[][] = [];
 	let current: Line[] = [];
 
-	text
-		.replace(/^﻿/, '')
-		.split(/\r?\n/)
-		.forEach((raw, i) => {
-			const line = raw.trim();
-			if (!line) {
-				if (current.length) blocks.push(current);
-				current = [];
-			} else {
-				current.push({ no: i + 1, text: line });
-			}
-		});
+	(text.charCodeAt(0) === 0xfeff ? text.slice(1) : text).split(/\r?\n/).forEach((raw, i) => {
+		const line = raw.trim();
+		if (!line) {
+			if (current.length) blocks.push(current);
+			current = [];
+		} else {
+			current.push({ no: i + 1, text: line });
+		}
+	});
 	if (current.length) blocks.push(current);
 
 	const members = blocks.map((b) => parseBlock(b, errors));
