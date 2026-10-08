@@ -8,7 +8,7 @@ Living plan. Tick milestones off in the **Status** list as they complete.
 - [x] M2 — Stats & domain model
 - [x] M3 — Paste import (Showdown + Pokepaste)
 - [x] M4 — Validation
-- [ ] M5 — PDF renderer (built and tested; awaiting side-by-side approval)
+- [x] M5 — PDF renderer
 - [ ] M6 — Builder UI & theming
 - [ ] M7 — Persistence
 - [ ] M8 — Polish & release
@@ -105,7 +105,7 @@ Rule: each milestone ships with its own tests and a "done when" check, and is te
 - Tests: one fixture per rule (illegal species, wrong ability, unlearnable move, duplicate move, SP 33 / total 67, species clause, item clause, <6 members, malformed DOB) → exactly the expected error; a fully legal fixture → zero errors.
 - Done when: rule suite passes for each regulation in `regulations.json`.
 
-**M5 — PDF renderer**
+**M5 — PDF renderer** ✅
 - Scope: `pdf/layout.ts` + `pdf/render.ts`, takes `(Player, Team, lang)`; dev‑only route `/dev/pdf` renders the fixture team so it is reviewable without the builder.
 - **Hard requirement — official look:** the sheet must look official/legal. The page structure is frozen to the official template: page size, header block, box grid, box borders, row/column positions and proportions, labels' placement, checkboxes, footer. Only the *contents of the value areas inside boxes/fields* (font, size, fitting, text) may vary. Layout coordinates are measured from `docs/play-pokemon-vg-team-list.pdf`, never eyeballed.
 - **Languages:** the user picks the sheet language (EN or ES). EN is the official template unchanged. ES is the same template with Spanish labels, keeping the official layout, label font, and label size as closely as reasonably possible (shrink a label only if the Spanish text won't fit its slot).
