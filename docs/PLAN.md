@@ -3,7 +3,7 @@
 Living plan. Tick milestones off in the **Status** list as they complete.
 
 ## Status
-- [ ] M0 — Scaffold & deploy
+- [x] M0 — Scaffold & deploy
 - [x] M1 — Data pipeline
 - [x] M2 — Stats & domain model
 - [x] M3 — Paste import (Showdown + Pokepaste)
@@ -76,7 +76,7 @@ Svelte 5 runes stores backed by localStorage (`pokelisto:v1:player`, `pokelisto:
 ## Milestones (each independently testable)
 Rule: each milestone ships with its own tests and a "done when" check, and is tested in isolation via **fixtures** (`tests/fixtures/`: sample teams as id‑based JSON + EN/ES paste texts), never by going through a later milestone. Primary fixture: `docs/samples/Sahils-Charizard-Y-Gliscor-Team-showdown.txt` (Indeedee, Gliscor, Kingambit, Charizard‑Y, Annihilape, Venusaur) copied into `tests/fixtures/` together with its hand‑written expected `Team` JSON. Logic milestones (M2–M5) are pure TS modules with no UI dependency, so they can be built/tested in any order after M1. Each milestone = one PR to `main`, CI green, deployed.
 
-**M0 — Scaffold & deploy**
+**M0 — Scaffold & deploy** ✅
 - Scope: SvelteKit + TS + adapter‑static + Paraglide (EN/ES) + Vitest + Playwright + ESLint/Prettier; GH Actions (lint, test, build, deploy to Pages); placeholder page with PokeListo wordmark and EN/ES switch. (Repo has no commits and is on `master`; create `main` first.)
 - Tests: Vitest smoke test; Playwright: `/en/` and `/es/` render translated heading, root redirects by browser language.
 - Done when: live GH Pages URL shows the page in both languages under the base path.
