@@ -177,3 +177,34 @@ describe('fetchPokepaste', () => {
 		expect(f).not.toHaveBeenCalled();
 	});
 });
+
+describe('real pokepast.es paste (f088ca02dfea05be)', () => {
+	const real = JSON.parse(fixture('pokepaste.gardevoir.json'));
+
+	it('fetches and parses to a legal-looking team (EVs lines used as stat points, CRLF, gender tags)', async () => {
+		const f = vi.fn(
+			async () => new Response(JSON.stringify({ title: real.title, paste: real.paste }))
+		);
+		const res = await fetchPokepaste(`https://pokepast.es/${real.id}`, f);
+		expect(res.ok).toBe(true);
+		if (!res.ok) return;
+
+		const { members, errors } = parseShowdown(res.text);
+		expect(errors).toEqual([]);
+		expect(members.map((m) => m.speciesId)).toEqual([
+			'indeedeef',
+			'torkoal',
+			'hatterene',
+			'gallade',
+			'basculegion',
+			'gardevoir'
+		]);
+		expect(members[0]).toMatchObject({ itemId: 'colburberry', natureId: 'relaxed' });
+		expect(members[0].sp).toEqual({ hp: 32, atk: 0, def: 32, spa: 0, spd: 2, spe: 0 });
+		expect(members[5]).toMatchObject({ speciesId: 'gardevoir', itemId: 'gardevoirite' });
+		for (const m of members) {
+			expect(m.moveIds).toHaveLength(4);
+			expect(Object.values(m.sp).reduce((a, b) => a + b, 0)).toBeLessThanOrEqual(66);
+		}
+	});
+});
