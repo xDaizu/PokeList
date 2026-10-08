@@ -221,21 +221,9 @@ describe('player', () => {
 		expect(validatePlayer(legalPlayer)).toEqual([]);
 	});
 
-	it.each([
-		['name', 'player.name:player.nameMissing'],
-		['playerId', 'player.playerId:player.playerIdMissing'],
-		['dob', 'player.dob:player.dobMissing'],
-		['division', 'player.division:player.divisionMissing']
-	] as const)('missing %s', (field, expected) => {
-		const p = { ...legalPlayer, [field]: '' };
-		expect(keys(validatePlayer(p))).toEqual([expected]);
-		expect(hasErrors(validatePlayer(p))).toBe(true);
-	});
-
-	it('missing support id is a warning', () => {
-		const issues = validatePlayer({ ...legalPlayer, supportId: ' ' });
-		expect(keys(issues)).toEqual(['player.supportId:player.supportIdMissing']);
-		expect(hasErrors(issues)).toBe(false);
+	it('player info is optional: an empty player has no issues', () => {
+		expect(validatePlayer(emptyPlayer())).toEqual([]);
+		expect(hasErrors(validate(legalTeam(regulations[0]), emptyPlayer()))).toBe(false);
 	});
 
 	it('DOB must be a real DD/MM/YYYY date', () => {
@@ -252,7 +240,7 @@ describe('validate', () => {
 	it('combines player and team issues; errors block, warnings do not', () => {
 		const team = legalTeam(regulations[0]);
 		expect(hasErrors(validate(team, legalPlayer))).toBe(false);
-		expect(hasErrors(validate(team, { ...legalPlayer, name: '' }))).toBe(true);
+		expect(hasErrors(validate(team, { ...legalPlayer, dob: 'x' }))).toBe(true);
 		team.members.pop();
 		expect(hasErrors(validate(team, legalPlayer))).toBe(true);
 	});
