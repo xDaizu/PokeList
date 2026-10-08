@@ -46,7 +46,12 @@ export type IssueKey =
 	| 'member.spOutOfRange'
 	| 'member.spTotalExceeded'
 	| 'member.spUnspent'
-	| 'player.dobInvalid';
+	| 'player.nameMissing'
+	| 'player.playerIdMissing'
+	| 'player.dobMissing'
+	| 'player.dobInvalid'
+	| 'player.divisionMissing'
+	| 'player.supportIdMissing';
 
 export interface Issue {
 	level: IssueLevel;
@@ -182,10 +187,17 @@ export function isValidDob(dob: string): boolean {
 	return date.getUTCFullYear() === y && date.getUTCMonth() === mo - 1 && date.getUTCDate() === d;
 }
 
-/** Player info is optional (players may handwrite it); only a malformed DOB is flagged. */
+/** Player info is optional (players may handwrite it): blank fields only warn; a malformed DOB is an error. */
 export function validatePlayer(player: Player): Issue[] {
+	const out: Issue[] = [];
+	if (!player.name.trim()) out.push(warn('player.name', 'player.nameMissing'));
+	if (!player.playerId.trim()) out.push(warn('player.playerId', 'player.playerIdMissing'));
 	const dob = player.dob.trim();
-	return dob && !isValidDob(dob) ? [err('player.dob', 'player.dobInvalid')] : [];
+	if (!dob) out.push(warn('player.dob', 'player.dobMissing'));
+	else if (!isValidDob(dob)) out.push(err('player.dob', 'player.dobInvalid'));
+	if (!player.division) out.push(warn('player.division', 'player.divisionMissing'));
+	if (!player.supportId.trim()) out.push(warn('player.supportId', 'player.supportIdMissing'));
+	return out;
 }
 
 export function validate(team: Team, player: Player): Issue[] {

@@ -221,8 +221,21 @@ describe('player', () => {
 		expect(validatePlayer(legalPlayer)).toEqual([]);
 	});
 
-	it('player info is optional: an empty player has no issues', () => {
-		expect(validatePlayer(emptyPlayer())).toEqual([]);
+	it.each([
+		['name', 'player.name:player.nameMissing'],
+		['playerId', 'player.playerId:player.playerIdMissing'],
+		['dob', 'player.dob:player.dobMissing'],
+		['division', 'player.division:player.divisionMissing'],
+		['supportId', 'player.supportId:player.supportIdMissing']
+	] as const)('blank %s only warns', (field, expected) => {
+		const issues = validatePlayer({ ...legalPlayer, [field]: field === 'supportId' ? ' ' : '' });
+		expect(keys(issues)).toEqual([expected]);
+		expect(issues[0].level).toBe('warning');
+		expect(hasErrors(issues)).toBe(false);
+	});
+
+	it('an empty player never blocks the PDF', () => {
+		expect(validatePlayer(emptyPlayer())).toHaveLength(5);
 		expect(hasErrors(validate(legalTeam(regulations[0]), emptyPlayer()))).toBe(false);
 	});
 
