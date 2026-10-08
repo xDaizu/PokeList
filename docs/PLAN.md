@@ -7,7 +7,7 @@ Living plan. Tick milestones off in the **Status** list as they complete.
 - [x] M1 — Data pipeline
 - [x] M2 — Stats & domain model
 - [x] M3 — Paste import (Showdown + Pokepaste)
-- [ ] M4 — Validation
+- [x] M4 — Validation
 - [ ] M5 — PDF renderer
 - [ ] M6 — Builder UI & theming
 - [ ] M7 — Persistence
@@ -99,7 +99,8 @@ Rule: each milestone ships with its own tests and a "done when" check, and is te
 - Tests: Sahil sample → exact expected `Team` JSON (SP from comment lines, e.g. Kingambit HP 32/Atk 1/Def 32/SpD 1; Charizard keeps Blaze + Charizardite Y); same team hand‑translated to ES paste → identical `Team`; `EVs:` fallback (≤32 accepted, 252 rejected); malformed/unknown names → errors with line numbers; Pokepaste fetch mocked (success, 404, CORS failure).
 - Done when: all fixtures round‑trip to the expected model; one real pokepast.es URL checked manually (CORS result documented).
 
-**M4 — Validation**
+**M4 — Validation** ✅
+- Implementation notes: `validateTeam(team)`, `validatePlayer(player)`, `validate(team, player)` and `hasErrors(issues)` in `src/lib/validate/index.ts`; issues are `{level, path, messageKey, params}` with a typed `IssueKey` union. Localized message strings are added with the validation panel in M6 (nothing user-facing yet). Warnings (don't block): missing item, <4 moves, unspent SP (<66), missing Support ID. Species clause is by Pokédex number. Because regulations are cumulative, M-C has no illegal species in the data, so that case is only exercised on M-B.
 - Scope: `validate/` rules + regulation selection.
 - Tests: one fixture per rule (illegal species, wrong ability, unlearnable move, duplicate move, SP 33 / total 67, species clause, item clause, <6 members, missing player fields) → exactly the expected error; a fully legal fixture → zero errors.
 - Done when: rule suite passes for each regulation in `regulations.json`.
