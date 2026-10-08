@@ -193,7 +193,7 @@ export function parseShowdown(text: string): ParseResult {
 	let current: Line[] = [];
 
 	text
-		.replace(/^FEFF/, '')
+		.replace(/^﻿/, '')
 		.split(/\r?\n/)
 		.forEach((raw, i) => {
 			const line = raw.trim();
