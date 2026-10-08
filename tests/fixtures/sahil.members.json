@@ -1,0 +1,50 @@
+[
+	{
+		"speciesId": "indeedee",
+		"abilityId": "psychicsurge",
+		"itemId": "focussash",
+		"natureId": "timid",
+		"moveIds": ["expandingforce", "protect", "imprison", "trickroom"],
+		"sp": { "hp": 2, "atk": 0, "def": 0, "spa": 32, "spd": 0, "spe": 32 }
+	},
+	{
+		"speciesId": "gliscor",
+		"abilityId": "hypercutter",
+		"itemId": "psychicseed",
+		"natureId": "adamant",
+		"moveIds": ["highhorsepower", "acrobatics", "tailwind", "protect"],
+		"sp": { "hp": 2, "atk": 32, "def": 0, "spa": 0, "spd": 0, "spe": 32 }
+	},
+	{
+		"speciesId": "kingambit",
+		"abilityId": "defiant",
+		"itemId": "chopleberry",
+		"natureId": "adamant",
+		"moveIds": ["kowtowcleave", "ironhead", "suckerpunch", "lowkick"],
+		"sp": { "hp": 32, "atk": 1, "def": 32, "spa": 0, "spd": 1, "spe": 0 }
+	},
+	{
+		"speciesId": "charizard",
+		"abilityId": "blaze",
+		"itemId": "charizarditey",
+		"natureId": "modest",
+		"moveIds": ["heatwave", "ancientpower", "protect", "weatherball"],
+		"sp": { "hp": 32, "atk": 0, "def": 2, "spa": 0, "spd": 32, "spe": 0 }
+	},
+	{
+		"speciesId": "annihilape",
+		"abilityId": "defiant",
+		"itemId": "choicescarf",
+		"natureId": "jolly",
+		"moveIds": ["phantomforce", "closecombat", "rockslide", "icepunch"],
+		"sp": { "hp": 0, "atk": 32, "def": 2, "spa": 0, "spd": 0, "spe": 32 }
+	},
+	{
+		"speciesId": "venusaur",
+		"abilityId": "chlorophyll",
+		"itemId": "widelens",
+		"natureId": "timid",
+		"moveIds": ["protect", "sludgebomb", "sleeppowder", "leafstorm"],
+		"sp": { "hp": 32, "atk": 0, "def": 0, "spa": 2, "spd": 0, "spe": 32 }
+	}
+]

@@ -6,7 +6,7 @@ Living plan. Tick milestones off in the **Status** list as they complete.
 - [ ] M0 — Scaffold & deploy
 - [x] M1 — Data pipeline
 - [x] M2 — Stats & domain model
-- [ ] M3 — Paste import (Showdown + Pokepaste)
+- [x] M3 — Paste import (Showdown + Pokepaste)
 - [ ] M4 — Validation
 - [ ] M5 — PDF renderer
 - [ ] M6 — Builder UI & theming
@@ -92,7 +92,9 @@ Rule: each milestone ships with its own tests and a "done when" check, and is te
 - Tests: table tests against known values from op.gg screenshots (Pawmot Jolly 32 Atk → 167 Atk, 30 Spe → 170 Spe; Dragapult Jolly 32 HP → 195 HP).
 - Done when: all stat fixtures match.
 
-**M3 — Paste import (Showdown + Pokepaste)**
+**M3 — Paste import (Showdown + Pokepaste)** ✅
+- Implementation notes: `parseShowdown(text)` returns `{ members, errors }` (errors are `{line, code, value}`, codes map to i18n messages in M6); `toTeam(members)` wraps them. Accepts ES labels too (`Habilidad:`, `Naturaleza X`, `PS/Atq/AtqEsp/DefEsp/Vel` in the SP comment). `fetchPokepaste(urlOrId, fetch?)` returns `{ok, text}` or an error code (`invalidUrl|notFound|http|network`; a CORS block surfaces as `network`). Fixtures: `tests/fixtures/sahil.{en,es}.txt` + `sahil.members.json`.
+- CORS: no real paste id was available without creating one, so only a 404 on `/json` was probed — it sends no `Access-Control-Allow-Origin`, so browser fetches from GH Pages will most likely fail and the UI must fall back to asking for pasted text. Re-check with a real paste in M6.
 - Scope: `paste/parse.ts` (EN+ES), `paste/pokepaste.ts`.
 - Tests: Sahil sample → exact expected `Team` JSON (SP from comment lines, e.g. Kingambit HP 32/Atk 1/Def 32/SpD 1; Charizard keeps Blaze + Charizardite Y); same team hand‑translated to ES paste → identical `Team`; `EVs:` fallback (≤32 accepted, 252 rejected); malformed/unknown names → errors with line numbers; Pokepaste fetch mocked (success, 404, CORS failure).
 - Done when: all fixtures round‑trip to the expected model; one real pokepast.es URL checked manually (CORS result documented).

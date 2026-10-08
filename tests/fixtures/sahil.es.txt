@@ -1,0 +1,55 @@
+Indeedee @ Banda Aguante
+Habilidad: Psicogénesis
+Naturaleza Miedosa
+# Champions stat points: PS 2 / AtqEsp 32 / Vel 32
+- Vasta Fuerza
+- Protección
+- Sellar
+- Espacio Raro
+
+Gliscor @ Semilla Psique
+Habilidad: Corte Fuerte
+Naturaleza Firme
+# Champions stat points: PS 2 / Atq 32 / Vel 32
+- Fuerza Equina
+- Acróbata
+- Viento Afín
+- Protección
+
+Kingambit @ Baya Pomaro
+Habilidad: Competitivo
+Naturaleza Firme
+# Champions stat points: PS 32 / Atq 1 / Def 32 / DefEsp 1
+- Genufendiente
+- Cabeza de Hierro
+- Golpe Bajo
+- Patada Baja
+
+Charizard @ Charizardita Y
+Habilidad: Mar Llamas
+# Champions mega preview: Y (variant 1)
+# Mega ability: Sequía
+Naturaleza Modesta
+# Champions stat points: PS 32 / Def 2 / DefEsp 32
+- Onda Ígnea
+- Poder Pasado
+- Protección
+- Meteorobola
+
+Annihilape @ Pañuelo Elección
+Habilidad: Competitivo
+Naturaleza Alegre
+# Champions stat points: Atq 32 / Def 2 / Vel 32
+- Golpe Fantasma
+- A Bocajarro
+- Avalancha
+- Puño Hielo
+
+Venusaur @ Lupa
+Habilidad: Clorofila
+Naturaleza Miedosa
+# Champions stat points: PS 32 / AtqEsp 2 / Vel 32
+- Protección
+- Bomba Lodo
+- Somnífero
+- Lluevehojas
