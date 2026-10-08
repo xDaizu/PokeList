@@ -1,0 +1,12 @@
+{
+	"abilities": {
+		"liquidooze": ["Lodo Líquido", "Toxisecreción"]
+	},
+	"items": {
+		"expertbelt": ["Cinta Experto", "Cinta Xperto"],
+		"metalcoat": ["Revest. Metálico"]
+	},
+	"species": {
+		"taurospaldeablaze": ["Tauros de Paldea Variedad Abrasadora"]
+	}
+}

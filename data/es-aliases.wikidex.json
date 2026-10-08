@@ -1,0 +1,616 @@
+{
+	"moves": {
+		"acrobatics": [
+			"Acrobacia"
+		],
+		"aerialace": [
+			"As Aéreo"
+		],
+		"afteryou": [
+			"Ceda el Paso"
+		],
+		"aircutter": [
+			"Aire Cortante"
+		],
+		"airslash": [
+			"Corte Aéreo"
+		],
+		"allyswitch": [
+			"Cambio de Lado"
+		],
+		"ancientpower": [
+			"Poder Antiguo"
+		],
+		"aquacutter": [
+			"Corte Acuático"
+		],
+		"aquaring": [
+			"Acuaanillo"
+		],
+		"aquatail": [
+			"Cola de Agua"
+		],
+		"assurance": [
+			"Garantía"
+		],
+		"aurasphere": [
+			"Aura Esfera"
+		],
+		"bite": [
+			"Mordida"
+		],
+		"blastburn": [
+			"Anillo de Fuego"
+		],
+		"bodyslam": [
+			"Golpe de Cuerpo"
+		],
+		"bonerush": [
+			"Hueso Veloz"
+		],
+		"bounce": [
+			"Rebote"
+		],
+		"bravebird": [
+			"Ave Brava"
+		],
+		"brickbreak": [
+			"Karatazo"
+		],
+		"bulletseed": [
+			"Bala Semilla"
+		],
+		"ceaselessedge": [
+			"Corte Metralla"
+		],
+		"chillyreception": [
+			"Respuesta Fría"
+		],
+		"clearsmog": [
+			"Humo Claro"
+		],
+		"closecombat": [
+			"Cuerpo a Cuerpo"
+		],
+		"confuseray": [
+			"Rayo de Confusión"
+		],
+		"cottonguard": [
+			"Guardialgodón"
+		],
+		"crosschop": [
+			"Golpe Cruzado"
+		],
+		"darkpulse": [
+			"Pulso Oscuro"
+		],
+		"defog": [
+			"Desempañar"
+		],
+		"destinybond": [
+			"Lazo del Destino"
+		],
+		"dracometeor": [
+			"Meteoro Dragón"
+		],
+		"dragondance": [
+			"Danza de Dragón"
+		],
+		"dragontail": [
+			"Cola de Dragón"
+		],
+		"drainingkiss": [
+			"Beso Drenador"
+		],
+		"drainpunch": [
+			"Puño Drenador"
+		],
+		"dualwingbeat": [
+			"Aletazo Doble"
+		],
+		"earthpower": [
+			"Poder Terrestre"
+		],
+		"electroball": [
+			"Electrobola"
+		],
+		"energyball": [
+			"Bola de Energía"
+		],
+		"extrasensory": [
+			"Extrasensorial"
+		],
+		"featherdance": [
+			"Danza de Plumas"
+		],
+		"ficklebeam": [
+			"Láser Caprichoso"
+		],
+		"fierydance": [
+			"Danza de Llamas"
+		],
+		"firefang": [
+			"Colmillo Fuego"
+		],
+		"flamecharge": [
+			"Carga de Fuego"
+		],
+		"flareblitz": [
+			"Erupción"
+		],
+		"flatter": [
+			"Halago"
+		],
+		"focusblast": [
+			"Ataque Centrado"
+		],
+		"focusenergy": [
+			"Centrar Energía"
+		],
+		"focuspunch": [
+			"Puño Centrado"
+		],
+		"frostbreath": [
+			"Vaho Helado"
+		],
+		"gastroacid": [
+			"Ácido Gástrico"
+		],
+		"glare": [
+			"Fulmirada"
+		],
+		"grassknot": [
+			"Nudo de Pasto"
+		],
+		"grassyterrain": [
+			"Campo de Césped"
+		],
+		"growth": [
+			"Crecimiento"
+		],
+		"guardsplit": [
+			"Guardia Dividida"
+		],
+		"hammerarm": [
+			"Brazo Martillo"
+		],
+		"headlongrush": [
+			"Asalto Frontal"
+		],
+		"headsmash": [
+			"Topetazo"
+		],
+		"healbell": [
+			"Cascabel Sanador"
+		],
+		"healingwish": [
+			"Deseo Sanador"
+		],
+		"healpulse": [
+			"Pulso Sanador"
+		],
+		"heatcrash": [
+			"Golpe de Calor"
+		],
+		"heavyslam": [
+			"Golpe Pesado"
+		],
+		"helpinghand": [
+			"Refuerzos"
+		],
+		"highjumpkick": [
+			"Patada Salto Alto"
+		],
+		"horndrill": [
+			"Cuerno Taladro"
+		],
+		"hornleech": [
+			"Drenacuerno"
+		],
+		"hurricane": [
+			"Huracán"
+		],
+		"hypervoice": [
+			"Hipervoz"
+		],
+		"icebeam": [
+			"Rayo de Hielo"
+		],
+		"iciclecrash": [
+			"Carámbano"
+		],
+		"iciclespear": [
+			"Lanza de Hielo"
+		],
+		"icywind": [
+			"Viento Helado"
+		],
+		"infestation": [
+			"Infestación"
+		],
+		"irondefense": [
+			"Defensa de Hierro"
+		],
+		"irontail": [
+			"Cola de Hierro"
+		],
+		"lastresort": [
+			"Último Recurso"
+		],
+		"lavaplume": [
+			"Bomba de Lava"
+		],
+		"leafstorm": [
+			"Tormenta de Hojas"
+		],
+		"lowsweep": [
+			"Barredora"
+		],
+		"machpunch": [
+			"Superpuño"
+		],
+		"magicpowder": [
+			"Polvo Magia"
+		],
+		"magnetrise": [
+			"Superimán"
+		],
+		"memento": [
+			"Recuerdo"
+		],
+		"metalburst": [
+			"Explosión Metálica"
+		],
+		"metalsound": [
+			"Sonido Metálico"
+		],
+		"milkdrink": [
+			"Licuado"
+		],
+		"mirrorcoat": [
+			"Escudo Espejo"
+		],
+		"morningsun": [
+			"Sol Matutino"
+		],
+		"mudshot": [
+			"Disparo de Lodo"
+		],
+		"mysticalfire": [
+			"Fuego Místico"
+		],
+		"nightdaze": [
+			"Pulso Nocturno"
+		],
+		"nightslash": [
+			"Corte Umbrío"
+		],
+		"nuzzle": [
+			"Frote"
+		],
+		"overheat": [
+			"Supercalor"
+		],
+		"paraboliccharge": [
+			"Carga Parabólica"
+		],
+		"payback": [
+			"Revancha"
+		],
+		"petalblizzard": [
+			"Tormenta de Pétalos"
+		],
+		"petaldance": [
+			"Danza de Pétalos"
+		],
+		"pinmissile": [
+			"Misil Aguja"
+		],
+		"playrough": [
+			"Juego Rudo"
+		],
+		"poisonjab": [
+			"Golpe Venenoso"
+		],
+		"poisonpowder": [
+			"Polvo Venenoso"
+		],
+		"powersplit": [
+			"Fuerza Dividida"
+		],
+		"powertrip": [
+			"Arrogancia"
+		],
+		"psychic": [
+			"Fuerza Psíquica"
+		],
+		"psyshock": [
+			"Choque Psíquico"
+		],
+		"quickguard": [
+			"Defensa Rápida"
+		],
+		"quiverdance": [
+			"Danza del Aleteo"
+		],
+		"raindance": [
+			"Danza de Lluvia"
+		],
+		"razorshell": [
+			"Coraza Afilada"
+		],
+		"rocktomb": [
+			"Tumba de Rocas"
+		],
+		"sacredsword": [
+			"Espada Sagrada"
+		],
+		"saltcure": [
+			"Salación"
+		],
+		"sandtomb": [
+			"Tumba de Arena"
+		],
+		"scaleshot": [
+			"Disparo Escamas"
+		],
+		"scaryface": [
+			"Cara Aterradora"
+		],
+		"screech": [
+			"Chillido"
+		],
+		"seedbomb": [
+			"Bomba Semilla"
+		],
+		"shadowclaw": [
+			"Garra de Sombra"
+		],
+		"sheercold": [
+			"Frío Extremo"
+		],
+		"skyattack": [
+			"Ataque Celestial"
+		],
+		"slackoff": [
+			"Relajar"
+		],
+		"sludgewave": [
+			"Ola de Lodo"
+		],
+		"snaptrap": [
+			"Trampa Presión"
+		],
+		"solarblade": [
+			"Cuchillada Solar"
+		],
+		"spitup": [
+			"Escupida"
+		],
+		"spore": [
+			"Esporas"
+		],
+		"stealthrock": [
+			"Trampa de Rocas"
+		],
+		"steelroller": [
+			"Ferroaplanadora"
+		],
+		"stickyweb": [
+			"Red Pegajosa"
+		],
+		"storedpower": [
+			"Poder Acumulado"
+		],
+		"stormthrow": [
+			"Llave Tempestad"
+		],
+		"stringshot": [
+			"Disparo de Seda"
+		],
+		"strugglebug": [
+			"Lucha Insecto"
+		],
+		"supercellslam": [
+			"Golpe Voltaico"
+		],
+		"superfang": [
+			"Supercolmillo"
+		],
+		"switcheroo": [
+			"Trueque"
+		],
+		"swordsdance": [
+			"Danza de Espadas"
+		],
+		"tailslap": [
+			"Golpe de Cola"
+		],
+		"taunt": [
+			"Provocación"
+		],
+		"teeterdance": [
+			"Danza del Caos"
+		],
+		"temperflare": [
+			"Furia Ardiente"
+		],
+		"thrash": [
+			"Golpiza"
+		],
+		"throatchop": [
+			"Golpe al Cuello"
+		],
+		"thunderbolt": [
+			"Atactrueno"
+		],
+		"thunderfang": [
+			"Colmillo Trueno"
+		],
+		"torchsong": [
+			"Canto Ígneo"
+		],
+		"vacuumwave": [
+			"Onda de Vacío"
+		],
+		"voltswitch": [
+			"Cambiavoltaje"
+		],
+		"volttackle": [
+			"Tacleada de Voltios"
+		],
+		"waterpulse": [
+			"Pulso de Agua"
+		],
+		"waterspout": [
+			"Columna de Agua"
+		],
+		"wavecrash": [
+			"Acuatacleada"
+		],
+		"whirlpool": [
+			"Remolino"
+		],
+		"whirlwind": [
+			"Torbellino"
+		],
+		"wideguard": [
+			"Guardia Amplia"
+		],
+		"wildcharge": [
+			"Carga Salvaje"
+		]
+	},
+	"items": {
+		"blackglasses": [
+			"Lentes de Sol"
+		],
+		"dragonfang": [
+			"Colmillo Dragón"
+		],
+		"shellbell": [
+			"Cascabel Nácar"
+		]
+	},
+	"abilities": {
+		"aftermath": [
+			"Secuela"
+		],
+		"aromaveil": [
+			"Velo Aromático"
+		],
+		"berserk": [
+			"Ira"
+		],
+		"blaze": [
+			"Mar de Llamas"
+		],
+		"cheekpouch": [
+			"Mejillas"
+		],
+		"earlybird": [
+			"Madrugador"
+		],
+		"flamebody": [
+			"Cuerpo de Fuego"
+		],
+		"flowerveil": [
+			"Velo Florido"
+		],
+		"fluffy": [
+			"Mullido"
+		],
+		"frisk": [
+			"Inspección"
+		],
+		"healer": [
+			"Alma Sanadora"
+		],
+		"icebody": [
+			"Cuerpo de Hielo"
+		],
+		"keeneye": [
+			"Perspicacia"
+		],
+		"klutz": [
+			"Torpeza"
+		],
+		"liquidooze": [
+			"Toxisecreción"
+		],
+		"magmaarmor": [
+			"Escudo de Magma"
+		],
+		"megalauncher": [
+			"Megalanzador"
+		],
+		"moody": [
+			"Temperamental"
+		],
+		"naturalcure": [
+			"Curación Natural"
+		],
+		"oblivious": [
+			"Despistado"
+		],
+		"pickup": [
+			"Recolección"
+		],
+		"poisontouch": [
+			"Contacto Tóxico"
+		],
+		"prankster": [
+			"Timador"
+		],
+		"raindish": [
+			"Curación Pluvial"
+		],
+		"sandforce": [
+			"Poder Arenoso"
+		],
+		"sandstream": [
+			"Chorro de Arena"
+		],
+		"sandveil": [
+			"Velo de Arena"
+		],
+		"sniper": [
+			"Puntería"
+		],
+		"soundproof": [
+			"Insonorización"
+		],
+		"superluck": [
+			"Supersuerte"
+		],
+		"tangledfeet": [
+			"Tambaleo"
+		],
+		"unaware": [
+			"Ignorancia"
+		],
+		"voltabsorb": [
+			"Absorbevoltios"
+		],
+		"waterbubble": [
+			"Acuaburbuja"
+		]
+	},
+	"natures": {
+		"lax": [
+			"Descuidada"
+		],
+		"mild": [
+			"Cordial"
+		],
+		"quiet": [
+			"Apacible"
+		],
+		"quirky": [
+			"Extravagante"
+		],
+		"relaxed": [
+			"Relajada"
+		]
+	}
+}

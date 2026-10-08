@@ -46,6 +46,39 @@ describe('names', () => {
 	});
 });
 
+describe('Spanish names renamed in newer games (audited against WikiDex)', () => {
+	it('uses the current Spain names', () => {
+		expect(nameOf('abilities', 'liquidooze', 'es')).toBe('Viscosecreción');
+		expect(nameOf('items', 'expertbelt', 'es')).toBe('Cinturón de Experto');
+		expect(nameOf('items', 'metalcoat', 'es')).toBe('Revestimiento Metálico');
+	});
+
+	it('still accepts the superseded and Latin American names as input', () => {
+		expect(resolveAlias('abilities', 'Lodo Líquido')).toBe('liquidooze');
+		expect(resolveAlias('abilities', 'Toxisecreción')).toBe('liquidooze');
+		expect(resolveAlias('items', 'Cinta Experto')).toBe('expertbelt');
+		expect(resolveAlias('items', 'Revest. Metálico')).toBe('metalcoat');
+	});
+});
+
+describe('inclusive input', () => {
+	it('accepts Latin American Spanish names', () => {
+		expect(resolveAlias('moves', 'Acrobacia')).toBe('acrobatics');
+		expect(resolveAlias('moves', 'Mordida')).toBe('bite');
+		expect(resolveAlias('abilities', 'Mar de Llamas')).toBe('blaze');
+		expect(resolveAlias('items', 'Lentes de Sol')).toBe('blackglasses');
+		expect(resolveAlias('species', 'Tauros de Paldea Variedad Abrasadora')).toBe(
+			'taurospaldeablaze'
+		);
+	});
+
+	it('accepts official English wording for regional and gendered forms', () => {
+		expect(resolveAlias('species', 'Hisuian Arcanine')).toBe('arcaninehisui');
+		expect(resolveAlias('species', 'Alolan Raichu')).toBe('raichualola');
+		expect(resolveAlias('species', 'Indeedee-Female')).toBe('indeedeef');
+	});
+});
+
 describe('resolveAlias', () => {
 	it('resolves EN, ES, accent-less and case variants', () => {
 		expect(resolveAlias('species', 'Garchomp')).toBe('garchomp');

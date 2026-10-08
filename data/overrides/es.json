@@ -6,5 +6,12 @@
 		"taurospaldeacombat": "Tauros de Paldea Variedad Combatiente",
 		"taurospaldeablaze": "Tauros de Paldea Variedad Ardiente",
 		"taurospaldeaaqua": "Tauros de Paldea Variedad Acuática"
+	},
+	"abilities": {
+		"liquidooze": "Viscosecreción"
+	},
+	"items": {
+		"expertbelt": "Cinturón de Experto",
+		"metalcoat": "Revestimiento Metálico"
 	}
 }
