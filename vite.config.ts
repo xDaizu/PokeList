@@ -16,7 +16,13 @@ export default defineConfig({
 			},
 			adapter: adapter({ fallback: undefined }),
 			paths: { base },
-			prerender: { entries: ['/', '/en/', '/es/'] }
+			prerender: {
+				entries: ['/', '/en/', '/es/'],
+				// /dev/pdf is a dev-only review page (404s outside `vite dev`); any other unreachable route is a bug.
+				handleUnseenRoutes: ({ routes, message }) => {
+					if (routes.some((route) => !route.startsWith('/dev/'))) throw new Error(message);
+				}
+			}
 		}),
 
 		paraglideVitePlugin({

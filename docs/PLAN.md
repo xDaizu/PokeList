@@ -8,7 +8,7 @@ Living plan. Tick milestones off in the **Status** list as they complete.
 - [x] M2 — Stats & domain model
 - [x] M3 — Paste import (Showdown + Pokepaste)
 - [x] M4 — Validation
-- [ ] M5 — PDF renderer
+- [ ] M5 — PDF renderer (built and tested; awaiting side-by-side approval)
 - [ ] M6 — Builder UI & theming
 - [ ] M7 — Persistence
 - [ ] M8 — Polish & release
@@ -107,7 +107,11 @@ Rule: each milestone ships with its own tests and a "done when" check, and is te
 
 **M5 — PDF renderer**
 - Scope: `pdf/layout.ts` + `pdf/render.ts`, takes `(Player, Team, lang)`; dev‑only route `/dev/pdf` renders the fixture team so it is reviewable without the builder.
+- **Hard requirement — official look:** the sheet must look official/legal. The page structure is frozen to the official template: page size, header block, box grid, box borders, row/column positions and proportions, labels' placement, checkboxes, footer. Only the *contents of the value areas inside boxes/fields* (font, size, fitting, text) may vary. Layout coordinates are measured from `docs/play-pokemon-vg-team-list.pdf`, never eyeballed.
+- **Languages:** the user picks the sheet language (EN or ES). EN is the official template unchanged. ES is the same template with Spanish labels, keeping the official layout, label font, and label size as closely as reasonably possible (shrink a label only if the Spanish text won't fit its slot).
 - Tests: Vitest renders fixture → PDF has 2 A4 pages and its extracted text contains expected EN labels/values (and ES for `lang='es'`), SP on page 1 only, DOB `DD/MM/YYYY`, Mega shown as base species; long‑name fixture stays within box (auto‑shrink); snapshot PNG (pdf.js) compared with committed baseline.
+- Test addition: overlay/diff the rendered page against the official PDF rasterized at the same size; frame geometry (lines, boxes, checkboxes) must match within a small tolerance, with value text masked out.
+- Implementation notes: `renderTeamSheet(player, team, {lang, fonts, pageSize})` in `src/lib/pdf/render.ts`; frame and label positions live in `layout.ts` as numbers measured from the official file (`scripts/pdf/extract-official.ts` → `tests/fixtures/official-layout.json`). **The official template is US Letter (612×792 pt), not A4**: the sheet is drawn in Letter coordinates and scaled uniformly (97.3 %) and centred onto A4, so proportions are untouched; `pageSize: 'letter'` is the exact original. Frame test: ink of our rules/boxes/checkboxes matches the official file within 0.25 pt; EN label text/size/position match within 1.6 pt. Fonts: Carlito (`@fontsource/carlito` woff, subset-embedded, loaded lazily by `fonts.ts`). Labels are `pdf_*` messages in `messages/{en,es}.json` (Spanish wording is ours; review it). Values are regular weight, SP bold, auto-shrunk then ellipsised (`fitText`). The official page 1 draws its bottom pair of rows slightly shorter; that quirk is reproduced. Dev review: `npm run dev` → `/dev/pdf/` (404 in builds); `npx tsx scripts/pdf/preview.ts` writes PDFs, PNGs and a red/blue overlay against the official file to `.cache/pdf/`. Visual baselines: `tests/fixtures/pdf-baseline/` (regenerate with `UPDATE_PDF_BASELINE=1`).
 - Done when: side‑by‑side with `docs/play-pokemon-vg-team-list.pdf` is approved (EN and ES).
 
 **M6 — Builder UI & theming**
